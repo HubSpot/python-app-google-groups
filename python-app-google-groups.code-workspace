@@ -1,0 +1,59 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "autoDocstring.docstringFormat": "google",
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+    "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+    "python.analysis.openFilesOnly": false,
+    "python.dataScience.enabled": false,
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.testing.promptToConfigure": false,
+    "python.linting.ignorePatterns": [
+      ".vscode/*.py",
+      "**/site-packages/**/*.py",
+      "**/__pycache__/*",
+      "dist/*",
+      "build/*"
+    ],
+    "[python]": {
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test_*.py"]
+  },
+  "launch": {
+    "configurations": [
+      {
+        "name": "Python: Debug Google Groups App",
+        "justMyCode": false,
+        "type": "python",
+        "request": "launch",
+        "module": "app_google_groups",
+        "args": ["-c", "config.json", "run"]
+      },
+      {
+        "name": "Python: Current file",
+        "justMyCode": false,
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "args": ["-c", "config.json", "run"]
+      }
+    ],
+    "compounds": []
+  }
+}

@@ -1,0 +1,12 @@
+requirements/*.txt
+dist/
+build/
+*.egg-info/
+__pycache__/
+app_google_groups/test.py
+config.json
+.coverage
+hidden/
+.vscode/
+.venv/
+tests/_dbcreds.py

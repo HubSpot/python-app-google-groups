@@ -1,0 +1,24 @@
+# Requirements for development environments should go in here.
+# These are extra to the packages in prod.txt, no need to duplicate!
+# These will only be installed by people working on your project
+# One per line, and version ranges can be specified (see PEP-440)
+# For example:
+# pytest >= 5.3.5, < 6
+-r prod.in
+# Flake8 keeps checks consistent within their minor releases
+# We don't want builds to fail on future/new checks
+black >= 19.10b0, < 20
+coverage >= 5.1, < 6
+flake8 >= 3.7.9, < 3.8
+flake8-annotations >= 2.0.1, < 3
+flake8-assertive >= 1.2.1, < 2
+flake8-bugbear >= 20.1.4, < 21
+flake8-comprehensions >= 3.2.2, < 4
+flake8-mutable >= 1.2.0, < 2
+isort[pyproject] >= 4.3.21, < 5
+pep8-naming >= 0.9.1, < 1
+pex >= 2.1.12, < 3
+pip-compile-multi >= 1.5.9, < 2
+pip-tools >= 5.1.1, < 6
+pylint >= 2.5.0, < 3
+rope >= 0.16.0, < 1
