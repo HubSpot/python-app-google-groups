@@ -1,0 +1,43 @@
+{
+  "approval_timeout": 30,
+  "database": {
+    "dbname": "app_google_groups",
+    "host": "mycluster.abc123.rds.amazonaws.com",
+    "password": "yesthisispassword",
+    "port": 3306,
+    "user": "app_google_groups"
+  },
+  "domain": "example.com",
+  "google": {
+    "client_email": "app-google-groups@app-google-groups-123456.iam.gserviceaccount.com",
+    "client_id": "1234567891011121314",
+    "delegated_user": "app-google-groups@example.com",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nPKDATA\n-----END PRIVATE KEY-----\n\n",
+    "private_key_id": "1a2b3c4d5e6f7g8h9i1j0k1l11m2n1o3p1q4",
+    "project_id": "app-google-groups-123456",
+    "scopes": [
+      "https://www.googleapis.com/auth/admin.directory.group",
+      "https://www.googleapis.com/auth/admin.directory.user.readonly",
+      "https://www.googleapis.com/auth/apps.groups.settings"
+    ],
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "type": "service_account"
+  },
+  "ldap": {
+    "admin_groups": [
+      "CN=google-groups-administrators,CN=Users,DC=example,DC=com"
+    ],
+    "bind_password": "anotherone",
+    "bind_user": "service-shepherd@example.COM",
+    "search_base": "CN=users,DC=example,dc=com",
+    "url": "ldap://10.0.0.1",
+    "use_tls": false
+  },
+  "slack": {
+    "api_token": "xoxb-theslacktoken-foryour-workspace",
+    "app_id": "A123ABC",
+    "approvals_channel": "G123ABC",
+    "signing_secret": "1a2b3c4d5e6f7g8h9i1j0k1l11m2n1o3p1q4"
+  },
+  "sockfile": "app.sock"
+}
