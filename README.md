@@ -2,14 +2,24 @@
 
 Slack app for managing Google Groups
 
+Check out the [wiki](https://github.com/HubSpot/python-app-google-groups/wiki) for more info.
+
 ## Deployment
+
+To get a copy of the deployable wheel or PEX file,
+follow these instructions:
 
 ```bash
 # Ensure dependencies have been generated
 make requirements
 # Build a Python wheel
 make wheel
+# Build a PEX package
+make pex
 ```
+
+After that, you can follow the instructions on the wiki for
+acquiring the necessary credentials and writing the config.
 
 ## Development
 
