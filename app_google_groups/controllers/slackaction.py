@@ -243,7 +243,9 @@ class SlackActionController(object):
                 if t == "multi_users_select":
                     return v.get("selected_users", [])
                 if t == "plain_text_input":
-                    return v.get("value", "")
+                    # Slack used to return no value field,
+                    # Then they updated it and it returns null instead
+                    return v.get("value", "") or ""
 
     async def _try_load_data(self, action: SlackAction) -> None:
         if "requester" in action.value:
